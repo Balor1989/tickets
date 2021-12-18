@@ -7,6 +7,55 @@
     <title>Document</title>
 </head>
 <body>
-   <h1>Webpack Template</h1>
+<header>
+    <nav class="header__navigation">
+        <h1 class="header__title">Avia tickets</h1>
+        <div class="header__select-box">
+            <select class="header__select-menu">
+                <option value="1">USD</option>
+                <option value="2">EUR</option>
+                <option value="3">UAH</option>
+            </select>
+        </div>
+    </nav>
+</header>
+<main>
+    <div class="form-section">
+        <div class="container">
+            <div class="card">
+                <form class="form-section__autocomplete-form">
+                    <div class="">
+                        <h3 class="card-title">Search Tickets</h3>
+                        <div class="">
+                            <input type="text" id="autoComplete" class="form-section__autocomplete-departure" />
+                            <label>Departure city</label>
+                        </div>
+                        <div class="">
+                            <input type="text" id="autoComplete" class="form-section__autocomplete-arrival" />
+                            <label>Arrival city</label>
+                        </div>
+                        <div class="">
+                            <input type="text" class="form-section__depart-date" />
+                            <label for="">Depart date </label>
+                        </div>
+                        <div class="">
+                            <input type="text" class="form-section__return-date" />
+                            <label for="">Return date </label>
+                        </div>
+                    </div>
+                    <div class="">
+                        <button class="" type="submit">
+                            Search
+                        </button>
+                        <button class="" type="reset">
+                            Reset
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="./js/app.js"></script>
 </body>
 </html>

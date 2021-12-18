@@ -1,28 +1,19 @@
 {
-  "name": "webpack-template",
+  "name": "lesson-54-intro-webpack",
   "version": "1.0.0",
-  "description": "build for layout",
-  "private": true,
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "webpack"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Balor1989/Webpack-template.git"
-  },
   "keywords": [],
-  "author": "Evgeniy",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Balor1989/Webpack-template/issues"
-  },
-  "homepage": "https://github.com/Balor1989/Webpack-template#readme",
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "autoprefixer": "^9.6.1",
-    "axios": "^0.24.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.0.6",
     "babel-polyfill": "^6.26.0",
@@ -35,5 +26,6 @@
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
     "webpack-dev-server": "^3.7.2"
-  }
+  },
+  "dependencies": {}
 }
