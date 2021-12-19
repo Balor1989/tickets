@@ -36,4 +36,15 @@ nav i.material-icons {
 .dropdown-content li > span {
 	color: #381cedeb !important;
 }
-/*  */
+
+/* Hero section */
+.hero-section {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+/* Footer */
+footer {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
