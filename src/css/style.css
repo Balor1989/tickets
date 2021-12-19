@@ -42,6 +42,25 @@ nav i.material-icons {
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
+.hero-container {
+	display: flex;
+	flex-direction: column;
+}
+
+/* Form section */
+
+.form-section .parallax-container {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.form-section .row {
+	margin-bottom: 0;
+}
+.form-section .card .card-title {
+	margin: 0;
+	font-weight: 700;
+	font-size: 35px;
+}
 
 /* Footer */
 footer {
