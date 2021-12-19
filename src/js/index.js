@@ -5,7 +5,7 @@ import { siteLink } from "./url";
 import { Location } from "./Location";
 import { FormAutocomplete } from './FormAutocomplete';
 import { getAutocompleteInstance, getDatePickerInstance } from "./plugins/materialize"
-import { Currency } from './currency';
+import { Currency } from './Currency';
 
 const currencyEl = new Currency()
 
