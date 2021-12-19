@@ -88,7 +88,7 @@ class Location {
     async fetchTickets(params) {
         const response = await this.api.prices(params)
         console.log(response.data)
-            // this.lastSearch = this.convertTickets(response.data);
+        this.lastSearch = this.convertTickets(response.data);
         console.log(this.convertTickets(response.data))
     };
 
@@ -100,8 +100,8 @@ class Location {
                 destination_name: this.getCityNameByCode(ticket.destination),
                 airline_logo: this.getAirlineLogoByCode(ticket.airline),
                 airline_name: this.getAirlineByCode(ticket.airline),
-                // daparture_at: this.formatDate(ticket.daparture_at, 'dd MMM yyyy hh:mm'),
-                // return_at: this.formatDate(ticket.return_at, 'dd MMM yyyy hh:mm')
+                expires_at: this.formatDate(ticket.expires_at, 'dd MMM yyyy hh:mm'),
+                return_at: this.formatDate(ticket.return_at, 'dd MMM yyyy hh:mm')
             }
         });
     }
