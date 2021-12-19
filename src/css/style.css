@@ -1,1 +1,32 @@
+/* Nav section */
+.navigation .brand-logo {
+	position: static;
+	margin: 0;
+}
+.logo {
+	display: flex;
+	align-items: center;
+}
+.navigation {
+	background-color: #381cedeb;
+}
+.nav-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.select-wrapper {
+	width: 90px;
+}
+.select-wrapper input {
+	color: antiquewhite;
+}
 
+.select-wrapper .caret {
+	fill: antiquewhite !important;
+}
+nav i.material-icons {
+	padding-top: 3px;
+	margin-right: 10px;
+}
+/*  */
