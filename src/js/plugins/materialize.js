@@ -1,11 +1,12 @@
 import 'materialize-css/dist/css/materialize.min.css'
 import 'materialize-css/dist/js/materialize.min.js'
 
-    const elems = document.querySelectorAll('.parallax');
-    M.Parallax.init(elems)
+document.addEventListener('DOMContentLoaded', function(){
+    const parallax = document.querySelectorAll('.parallax');
+    M.Parallax.init(parallax)
+})
 
-
-    const select = document.querySelectorAll('select');
+const select = document.querySelectorAll('select');
 M.FormSelect.init(select);
 
 export function getSelectInstance(elem) {

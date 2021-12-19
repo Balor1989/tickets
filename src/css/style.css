@@ -1,4 +1,7 @@
 /* Nav section */
+header .parallax-container {
+	height: 350px;
+}
 .navigation .brand-logo {
 	position: static;
 	margin: 0;
@@ -8,6 +11,7 @@
 	align-items: center;
 }
 .navigation {
+	margin-top: 40px;
 	background-color: #381cedeb;
 }
 .nav-wrapper {
@@ -28,5 +32,8 @@
 nav i.material-icons {
 	padding-top: 3px;
 	margin-right: 10px;
+}
+.dropdown-content li > span {
+	color: #381cedeb !important;
 }
 /*  */

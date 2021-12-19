@@ -9,66 +9,75 @@
 </head>
 <body>
 <header>
-    <nav class="navigation">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                <i class="large material-icons">airplanemode_active</i>
-                <a href="#" class="brand-logo">Авиа Билеты</a>
+<div class="parallax-container">
+    <div class="parallax"><img src="https://cdn.pixabay.com/photo/2016/07/05/18/35/aircraft-1499171_1280.jpg"></div>
+        <nav class="navigation">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo">
+                    <i class="large material-icons">airplanemode_active</i>
+                    <a href="#" class="brand-logo">Авиа Билеты</a>
+                    </div>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li>
+                            <div class="input-field currency">
+                                <select>
+                                    <option value="USD">USD</option>
+                                    <option value="EUR">EUR</option>
+                                    <option value="UAH">UAH</option>
+                                </select>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li>
-                        <div class="input-field currency">
-                            <select>
-                                <option value="USD">USD</option>
-                                <option value="EUR">EUR</option>
-                                <option value="UAH">UAH</option>
-                            </select>
-                        </div>
-                    </li>
-                </ul>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </div>
 </header>
 <main>
-    <div class="form-section">
-        <div class="container">
-            <div class="card">
-                <form class="form-section__autocomplete-form">
-                    <div class="">
-                        <h3 class="card-title">Search Tickets</h3>
-                        <div class="">
-                            <input type="text" id="autoComplete" class="form-section__autocomplete-departure" />
-                            <label>Departure city</label>
+<section class="form-section">
+    <div class="container">
+        <div class="row d-flex">
+            <div class="col m6 mx-auto">
+                <div class="card">
+                    <form name="locationControls">
+                        <div class="card-content">
+                            <span class="card-title">Card Title</span>
+                            <div class="input-field">
+                                <input type="text" id="autocomplete-origin" class="autocomplete" />
+                                <label for="autocomplete-origin">Origin</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" id="autocomplete-destination" class="autocomplete" />
+                                <label for="autocomplete-destination">Destination</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" class="datepicker" id="datepicker-depart" />
+                                <label for="datepicker-depart">Depart date</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" class="datepicker" id="datepicker-return" />
+                                <label for="datepicker-return">Return date</label>
+                            </div>
                         </div>
-                        <div class="">
-                            <input type="text" id="autoComplete" class="form-section__autocomplete-arrival" />
-                            <label>Arrival city</label>
+                        <div class="card-action d-flex">
+                            <button class="btn waves-effect waves-light purple darken-3" type="submit" name="action">
+                                Search
+                                <i class="material-icons right">send</i>
+                            </button>
+                            <button class="btn waves-effect waves-light pink darken-3 ml-auto" type="reset"
+                                name="action">
+                                Reset
+                                <i class="material-icons right">cancel</i>
+                            </button>
                         </div>
-                        <div class="">
-                            <input type="text" class="form-section__depart-date" />
-                            <label for="">Depart date </label>
-                        </div>
-                        <div class="">
-                            <input type="text" class="form-section__return-date" />
-                            <label for="">Return date </label>
-                        </div>
-                    </div>
-                    <div class="">
-                        <button class="" type="submit">
-                            Search
-                        </button>
-                        <button class="" type="reset">
-                            Reset
-                        </button>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
+</section>
 </main>
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="js/index.js"></script>
 </body>
 </html>
