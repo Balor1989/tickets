@@ -2,16 +2,18 @@ import '../css/style.css'
 import './plugins'
 import { Api } from "./Api";
 import { siteLink } from "./url";
-import { Location } from "./Location";
+import {Location}  from "./Location";
 import { FormAutocomplete } from './FormAutocomplete';
 import { getAutocompleteInstance, getDatePickerInstance } from "./plugins/materialize"
 import { Currency } from './Currency';
+import { formatDate } from './date';
+
 
 const currencyEl = new Currency()
 
 const api = new Api(siteLink)
 
-const location = new Location(api)
+const location = new Location(api, { formatDate })
 
 const formAutocomplete = new FormAutocomplete(getAutocompleteInstance, getDatePickerInstance)
 

@@ -1,14 +1,15 @@
+import { formatDate } from "date-fns";
 
+ export class Location {
 
-export class Location {
-
-    constructor(api) {
-    this.api = api
-    this.countries = null,
-    this.cities = null,
-    this.citiesList = {},
-    this.airlines = {},
-    this.lastSearch = {};
+    constructor(api, helpers) {
+        this.api = api;
+        this.countries = null;
+        this.cities = null;
+        this.citiesList = {};
+        this.airlines = {};
+        this.lastSearch = {};
+        this.formatDate = helpers.formatDate;
     }
     async init() {
         const response = await Promise.all([
@@ -86,6 +87,7 @@ export class Location {
     async fetchTickets(params) {
         const response = await this.api.prices(params)
         this.lastSearch = this.convertTickets(response.data);
+        console.log(ths.lastSearch)
     };
 
     convertTickets(tickets) {
@@ -95,7 +97,9 @@ export class Location {
                 origin_name: this.getCityNameByCode(ticket.origin),
                 destination_name: this.getCityNameByCode(ticket.destination),
                 airline_logo: this.getAirlineLogoByCode(ticket.airline),
-                airline_name: this.getAirlineByCode(ticket.airline)
+                airline_name: this.getAirlineByCode(ticket.airline),
+                daparture_at: this.formatDate(ticket.daparture_at, 'dd MMM hh:mm'),
+                return_at: this.formatDate(ticket.return_at, 'dd MMM hh:mm')
             }
         });
     }
