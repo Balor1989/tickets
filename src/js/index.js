@@ -1,24 +1,22 @@
 import '../css/style.css'
 import './plugins'
-import { Api } from "./Api";
-import { siteLink } from "./url";
+import api from './Api'
 import {Location}  from "./Location";
-import { FormAutocomplete } from './FormAutocomplete';
-import { getAutocompleteInstance, getDatePickerInstance } from "./plugins/materialize"
-import { Currency } from './Currency';
+import formAutocomplete from './FormAutocomplete'
+import currencyEl from './currency';
 import { formatDate } from './date';
 
 
-const currencyEl = new Currency()
 
-const api = new Api(siteLink)
+
+
 
 const location = new Location(api, { formatDate })
 
-const formAutocomplete = new FormAutocomplete(getAutocompleteInstance, getDatePickerInstance)
 
 
-document.addEventListener('DOMContentLoaded', () => {
+
+document.addEventListener('DOMContentLoaded', (e) => {
 
     initApp();
     const form = formAutocomplete.form;
@@ -39,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const depart_date = formAutocomplete.departDateValue;
         const return_date = formAutocomplete.returnDateValue;
         const currency = currencyEl.currencyValue;
-        console.log(origin, destination, depart_date, return_date)
+
         await location.fetchTickets({
             origin,
             destination,

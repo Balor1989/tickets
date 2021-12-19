@@ -1,5 +1,5 @@
-
-export class FormAutocomplete {
+import { getAutocompleteInstance, getDatePickerInstance } from "./plugins/materialize"
+ class FormAutocomplete {
     
     constructor(autocomplete, datepicker) {
     this.form = document.querySelector('.autocomplete-form'),
@@ -33,3 +33,6 @@ export class FormAutocomplete {
     }
 }
 
+const formAutocomplete = new FormAutocomplete(getAutocompleteInstance, getDatePickerInstance)
+
+export default formAutocomplete;

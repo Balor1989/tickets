@@ -1,6 +1,7 @@
 import axios from "axios"
+import {siteLink} from './url'
 
-export class Api {
+ class Api {
     constructor(config) {
         this.url = config.url
     }
@@ -52,6 +53,10 @@ export class Api {
     };
     
 }
+
+const api = new Api(siteLink)
+
+export default api
 
 
 

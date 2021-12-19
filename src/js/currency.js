@@ -1,4 +1,4 @@
-export class Currency {
+class Currency {
     constructor() {
         this.currency = document.querySelector('.currency-select')
     }
@@ -7,3 +7,6 @@ export class Currency {
         return this.currency.value;
     };
 }
+const currencyEl = new Currency();
+
+export default currencyEl;

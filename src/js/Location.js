@@ -1,4 +1,4 @@
-import { formatDate } from "date-fns";
+// import { formatDate } from './date';
 
  export class Location {
 
@@ -86,8 +86,9 @@ import { formatDate } from "date-fns";
 
     async fetchTickets(params) {
         const response = await this.api.prices(params)
-        this.lastSearch = this.convertTickets(response.data);
-        console.log(ths.lastSearch)
+        console.log(response.data)
+            // this.lastSearch = this.convertTickets(response.data);
+        console.log(this.convertTickets(response.data))
     };
 
     convertTickets(tickets) {
@@ -98,8 +99,8 @@ import { formatDate } from "date-fns";
                 destination_name: this.getCityNameByCode(ticket.destination),
                 airline_logo: this.getAirlineLogoByCode(ticket.airline),
                 airline_name: this.getAirlineByCode(ticket.airline),
-                daparture_at: this.formatDate(ticket.daparture_at, 'dd MMM hh:mm'),
-                return_at: this.formatDate(ticket.return_at, 'dd MMM hh:mm')
+                // daparture_at: this.formatDate(ticket.daparture_at, 'dd MMM yyyy hh:mm'),
+                // return_at: this.formatDate(ticket.return_at, 'dd MMM yyyy hh:mm')
             }
         });
     }
