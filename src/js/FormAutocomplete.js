@@ -16,14 +16,20 @@ export class FormAutocomplete {
         return this.form
     }
     get originValue(){
+        return this.origin.value
+    }
+     get arrivalValue(){
         return this.arrival.value
     }
     get departDateValue() {
-        return this.departDate.value
+        return this.departDate.value.toString()
     }
     get returnDateValue() {
-        return this.departDate.value
+        return this.departDate.value.toString()
     }
-
+    setAutocomplete(data) {
+        this.originAutocomplete.updateData(data)
+        this.arrivalAutocomplete.updateData(data)
+    }
 }
 

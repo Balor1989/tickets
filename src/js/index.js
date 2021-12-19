@@ -13,6 +13,23 @@ const location = new Location(api)
 
 const formAutocomplete = new FormAutocomplete(getAutocompleteInstance, getDatePickerInstance)
 
-location.init().then(response => {
-    console.log(response)
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    initApp();
+    
+
+    async function initApp()  {
+        await location.init();
+        formAutocomplete.setAutocomplete(location.citiesList)
+    }
+
+    async function onSubmitForm() {
+        const origin = formAutocomplete.originValue;
+        const destination = formAutocomplete.arrivalValue;
+        const depart_date = formAutocomplete.departDateValue;
+        const return_date = formAutocomplete.returnDateValue;
+
+        console.log(origin, destination, depart_date, return_date)
+    }
 })
