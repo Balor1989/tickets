@@ -20,6 +20,11 @@ export class Location {
         this.citiesList = this.createCitieslist(this.cities)
         return response;
     }
+
+    getCityCodeByKey(key) {
+        return this.cities[key].code;
+}
+
     createCitieslist(cities){
         return Object.entries(cities).reduce((acc, [key]) => {
             // console.log(key)
@@ -46,6 +51,10 @@ export class Location {
             acc[key] = city;
             return acc
         },{})
-   }
+    }
+    async fetchTickets(params) {
+        const response = await this.api.prices(params)
+        console.log(response)
+    }
 }
 

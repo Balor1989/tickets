@@ -2,7 +2,7 @@
 export class FormAutocomplete {
     
     constructor(autocomplete, datepicker) {
-    this.form = document.querySelector('.utocomplete-form'),
+    this.form = document.querySelector('.autocomplete-form'),
     this.origin = document.querySelector('.autocomplete-origin'),
     this.arrival = document.querySelector('.autocomplete-destination'),
     this.departDate = document.querySelector('.depart-date'),
