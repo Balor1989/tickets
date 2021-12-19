@@ -23,11 +23,11 @@ header .parallax-container {
 	width: 90px;
 }
 .select-wrapper input {
-	color: antiquewhite;
+	color: #faebd7;
 }
 
 .select-wrapper .caret {
-	fill: antiquewhite !important;
+	fill: #faebd7 !important;
 }
 nav i.material-icons {
 	padding-top: 3px;
@@ -56,10 +56,25 @@ nav i.material-icons {
 .form-section .row {
 	margin-bottom: 0;
 }
+.form-section .card {
+	background-color: #3c1efccf;
+}
 .form-section .card .card-title {
 	margin: 0;
 	font-weight: 700;
 	font-size: 35px;
+	color: #fcfcfcda;
+}
+.card-action {
+	display: flex;
+	justify-content: space-between;
+}
+input.autocomplete,
+input.datepicker {
+	color: #fcfcfcda;
+}
+.form-section .input-field {
+	margin: 17px 0;
 }
 
 /* Footer */
