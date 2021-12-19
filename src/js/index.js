@@ -1,17 +1,8 @@
 import '../css/style.css'
 import './plugins'
-import api from './Api'
-import {Location}  from "./Location";
+import location  from "./Location";
 import formAutocomplete from './FormAutocomplete'
 import currencyEl from './currency';
-import { formatDate } from './date';
-
-
-
-
-
-
-const location = new Location(api, { formatDate })
 
 
 

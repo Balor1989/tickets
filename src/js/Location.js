@@ -1,6 +1,7 @@
-// import { formatDate } from './date';
+import { formatDate } from './date';
+import api from './Api';
 
- export class Location {
+class Location {
 
     constructor(api, helpers) {
         this.api = api;
@@ -106,3 +107,6 @@
     }
 }
 
+
+const location = new Location(api, { formatDate })
+export default location;
