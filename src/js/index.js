@@ -1,4 +1,5 @@
 import '../css/style.css'
+import './plugins'
 import { Api } from "./Api";
 import { siteLink } from "./url";
 import { Location } from "./Location";
