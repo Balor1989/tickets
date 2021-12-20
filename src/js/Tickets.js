@@ -35,37 +35,32 @@ class Tickets {
     }
 
     static ticketsTemplate(ticket) {
-        return `<div class="card-list-item">
-      <div class="card ticket-card">
-        <div class="ticket-airline d-flex align-items-center">
-          <img
-            src="${ticket.airline_logo}"
-            class="ticket-airline-img"
-          />
-          <span class="ticket-airline-name"
-            >${ticket.airline_name}</span
-          >
-        </div>
-        <div class="ticket-origin">
-          <div class="d-flex align-items-center mr-auto">
-            <span class="ticket-city">${ticket.origin_name}</span>
-            <i class="medium material-icons">flight_takeoff</i>
-          </div>
-          <div class="ticket-destination">
-            <i class="medium material-icons">flight_land</i>
-            <span class="ticket-city">${ticket.destination_name}</span>
-          </div>
-        </div>
-        <div class="ticket-time-price">
-          <span class="ticket-time-departure">${ticket.expires_at}</span>
-          <span class="ticket-price ml-auto">${ticket.price}</span>
-        </div>
-        <div class="ticket-additional-info">
-          <span class="ticket-transfers">Пересадок: ${ticket.transfers}</span>
-          <span class="ticket-flight-number">Номер рейса: ${ticket.flight_number}</span>
-        </div>
-      </div>
-    </div>`
+        return `<div class="ticket-box">
+            <div class="ticket-card">
+                <div class="ticket-airline">
+                    <img src="${ticket.airline_logo}" class="ticket-airline-img" />
+                    <span class="ticket-airline-name">${ticket.airline_name}</span>
+                </div>
+                <div class="tickets-information-box">
+                    <div class="ticket-origin">
+                        <span class="ticket-city-from">${ticket.origin_name}</span>
+                        <i class="small material-icons">flight_takeoff</i>
+                    </div>
+                    <div class="ticket-destination">
+                        <i class="small material-icons">flight_land</i>
+                        <span class="ticket-city-to">${ticket.destination_name}</span>
+                    </div>
+                </div>
+                <div class="ticket-time-price">
+                    <span class="ticket-time-departure">${ticket.expires_at}</span>
+                    <span class="ticket-price">${ticket.price}</span>
+                </div>
+                <div class="ticket-additional-info">
+                    <span class="ticket-transfers">Пересадок:${ticket.transfers}</span>
+                    <span class="ticket-flight-number">Номер рейса:${ticket.flight_number}</span>
+                </div>
+            </div>
+        </div>`
     }
 }
 

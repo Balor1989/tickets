@@ -1,9 +1,14 @@
+body {
+	background-color: #ddedebd5;
+	color: #381cedeb;
+}
+
 /* Nav section */
 header .parallax-container {
 	height: 350px;
 }
 .navigation .brand-logo {
-	position: static;
+	position: relative;
 	margin: 0;
 }
 .logo {
@@ -117,10 +122,22 @@ input.datepicker {
 	width: 80px;
 	margin-right: 20px;
 }
-.tickets-information-box {
+.ticket-airline-name {
+	font-weight: 700;
+	font-size: 15px;
+}
+.tickets-information-box,
+.ticket-time-price {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	margin-bottom: 10px;
+}
+.ticket-city-from {
+	margin-right: 10px;
+}
+.ticket-city-to {
+	margin-left: 10px;
 }
 
 /* Footer */
