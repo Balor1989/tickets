@@ -56,8 +56,8 @@ class Tickets {
                     <span class="ticket-price">${ticket.price}</span>
                 </div>
                 <div class="ticket-additional-info">
-                    <span class="ticket-transfers">Пересадок:${ticket.transfers}</span>
-                    <span class="ticket-flight-number">Номер рейса:${ticket.flight_number}</span>
+                    <span class="ticket-transfers">Пересадок: ${ticket.transfers}</span>
+                    <span class="ticket-flight-number">Номер рейса: ${ticket.flight_number}</span>
                 </div>
             </div>
         </div>`
