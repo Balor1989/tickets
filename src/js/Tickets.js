@@ -1,6 +1,9 @@
+import currencyEl from "./currency";
+
 class Tickets {
-    constructor() {
+    constructor(currency) {
         this.container = document.querySelector('.card-list')
+        this.currencySymbol = currencyEl.getСurrencySymbol
     }
 
     renderTickets(tickets) {
@@ -10,8 +13,9 @@ class Tickets {
             return;
         }
         let fragment = '';
+        const currency = currencyEl.getСurrencySymbol()
         tickets.forEach(ticket => {
-            const template = Tickets.ticketsTemplate(ticket)
+            const template = Tickets.ticketsTemplate(ticket, currency)
             fragment += template;
             
         })
@@ -28,13 +32,19 @@ class Tickets {
 
     }
 
-    static emptyMessageTemplate(value) {
+    static emptyMessageTemplate() {
         return `<div class ="empty-box">
         <p class="empty-description">По вашему запросу ничего не найдено!</p>
         </div>`
     }
 
-    static ticketsTemplate(ticket) {
+    static ticketsTemplate(ticket, symbol) {
+        if (!ticket.airline_logo) {
+            ticket.airline_logo = 'https://cdn.pixabay.com/photo/2017/01/08/07/49/travel-1962322__340.png'
+        }
+        if (!ticket.airline_name) {
+            ticket.airline_name = 'Неизвестная компания'
+        }
         return `<div class="ticket-box">
             <div class="ticket-card">
                 <div class="ticket-airline">
@@ -53,7 +63,7 @@ class Tickets {
                 </div>
                 <div class="ticket-time-price">
                     <span class="ticket-time-departure">${ticket.expires_at}</span>
-                    <span class="ticket-price">${ticket.price}</span>
+                    <span class="ticket-price">${symbol} ${ticket.price}</span>
                 </div>
                 <div class="ticket-additional-info">
                     <span class="ticket-transfers">Пересадок: ${ticket.transfers}</span>
@@ -64,6 +74,6 @@ class Tickets {
     }
 }
 
-const tickets = new Tickets();
+const tickets = new Tickets(currencyEl);
 
 export default tickets;
