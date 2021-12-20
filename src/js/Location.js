@@ -93,6 +93,7 @@ class Location {
     };
 
     convertTickets(tickets) {
+
         return Object.values(tickets).map(ticket => {
             return {
                 ...ticket,

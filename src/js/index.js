@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     }
 
     async function onSubmitForm() {
+
         const origin = location.getCityCodeByKey(formAutocomplete.originValue);
         const destination = location.getCityCodeByKey(formAutocomplete.arrivalValue);
         const depart_date = formAutocomplete.departDateValue;
@@ -38,7 +39,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
             return_date,
             currency
         });
-        console.log(location.lastSearch)
         tickets.renderTickets(location.lastSearch)
     }
 })
