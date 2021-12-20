@@ -1,5 +1,5 @@
 body {
-	background-color: #ddedebd5;
+	background-color: #ffffffde;
 	color: #381cedeb;
 }
 
@@ -50,6 +50,14 @@ nav i.material-icons {
 .hero-container {
 	display: flex;
 	flex-direction: column;
+}
+.hero-title {
+	font-weight: 700;
+	color: #434a4dde;
+}
+.hero-description {
+	color: #434a4dde;
+	font-size: 25px;
 }
 
 /* Form section */
@@ -141,6 +149,6 @@ input.datepicker {
 
 /* Footer */
 footer {
-	padding-top: 40px;
-	padding-bottom: 160px;
+	padding-top: 80px;
+	background-color: #381cedeb;
 }
