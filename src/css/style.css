@@ -102,7 +102,7 @@ input.datepicker {
 	margin-right: auto;
 }
 .ticket-box {
-	width: 270px;
+	width: 450px;
 	margin: 15px;
 	/* border-radius: 20px; */
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 1), -23px 0 20px -23px rgba(0, 0, 0, 0.8),
@@ -114,7 +114,6 @@ input.datepicker {
 .ticket-airline {
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
 }
 .ticket-airline-img {
 	width: 80px;
@@ -133,9 +132,11 @@ input.datepicker {
 }
 .ticket-city-from {
 	margin-right: 10px;
+	text-transform: uppercase;
 }
 .ticket-city-to {
 	margin-left: 10px;
+	text-transform: uppercase;
 }
 
 /* Footer */
