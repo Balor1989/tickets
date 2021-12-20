@@ -27,7 +27,7 @@ class Tickets {
     }
 
     showEmptyMessage() {
-        const template = Tickets.showEmptyMessage();
+        const template = Tickets.emptyMessageTemplate();
         this.container.insertAdjacentHTML('afterbegin', template)
 
     }

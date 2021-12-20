@@ -109,6 +109,13 @@ input.datepicker {
 	margin-left: auto;
 	margin-right: auto;
 }
+.card-list-title,
+.empty-description {
+	height: inherit;
+	margin: 0;
+	font-weight: 700;
+	font-size: 30px;
+}
 .ticket-box {
 	width: 450px;
 	margin: 15px;
