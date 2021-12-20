@@ -78,6 +78,12 @@ input.datepicker {
 	margin: 17px 0;
 }
 
+/* Tickets-section */
+.tickets-section {
+	padding-top: 200px;
+	padding-bottom: 200px;
+}
+
 /* Footer */
 footer {
 	padding-top: 160px;
