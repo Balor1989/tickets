@@ -1,5 +1,5 @@
 body {
-	background-color: rgba(221,237,235,0.83529);
+	background-color: rgba(255,255,255,0.87059);
 	color: rgba(56,28,237,0.92157);
 }
 
@@ -50,6 +50,14 @@ nav i.material-icons {
 .hero-container {
 	display: flex;
 	flex-direction: column;
+}
+.hero-title {
+	font-weight: 700;
+	color: rgba(67,74,77,0.87059);
+}
+.hero-description {
+	color: rgba(67,74,77,0.87059);
+	font-size: 25px;
 }
 
 /* Form section */
@@ -141,8 +149,8 @@ input.datepicker {
 
 /* Footer */
 footer {
-	padding-top: 40px;
-	padding-bottom: 160px;
+	padding-top: 80px;
+	background-color: rgba(56,28,237,0.92157);
 }
 
 /*!
