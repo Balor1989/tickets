@@ -4,8 +4,7 @@ import location  from "./Location";
 import formAutocomplete from './FormAutocomplete';
 import currencyEl from './currency';
 import tickets from './Tickets';
-import { Loading } from 'notiflix/build/notiflix-loading-aio';
-
+import  Loading  from './plugins/notiflix';
 
 
 document.addEventListener('DOMContentLoaded', (e) => {
