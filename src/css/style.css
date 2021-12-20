@@ -1,6 +1,6 @@
 body {
 	background-color: #ffffffde;
-	color: #381cedeb;
+	color: #434a4dde;
 }
 
 /* Nav section */
@@ -130,6 +130,7 @@ input.datepicker {
 .ticket-airline-name {
 	font-weight: 700;
 	font-size: 15px;
+	color: #381cedeb;
 }
 .tickets-information-box,
 .ticket-time-price {
@@ -148,7 +149,15 @@ input.datepicker {
 }
 
 /* Footer */
-footer {
-	padding-top: 80px;
+.footer-box {
+	margin-top: 400px;
+	padding: 20px 0;
 	background-color: #381cedeb;
+}
+.footer-description {
+	display: flex;
+	align-items: center;
+	font-size: 15px;
+	margin: 0;
+	color: #fcfcfcda;
 }
