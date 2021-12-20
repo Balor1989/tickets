@@ -80,8 +80,29 @@ input.datepicker {
 
 /* Tickets-section */
 .tickets-section {
-	padding-top: 200px;
-	padding-bottom: 200px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+.card-list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: -25px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.ticket-box {
+	max-width: 450px;
+	/* // min-height: 600px; */
+	margin: 25px;
+	width: calc(100 / 2 * 50px) / 2;
+	/* border-radius: 20px; */
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 1), -23px 0 20px -23px rgba(0, 0, 0, 0.8),
+		23px 0 20px -23px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.ticket-card {
+	padding: 15px;
 }
 
 /* Footer */

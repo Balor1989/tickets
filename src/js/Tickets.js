@@ -35,7 +35,7 @@ class Tickets {
     }
 
     static ticketsTemplate(ticket) {
-        return `<div class="col s12 m6">
+        return `<div class="card-list-item">
       <div class="card ticket-card">
         <div class="ticket-airline d-flex align-items-center">
           <img
@@ -46,17 +46,17 @@ class Tickets {
             >${ticket.airline_name}</span
           >
         </div>
-        <div class="ticket-destination d-flex align-items-center">
+        <div class="ticket-origin">
           <div class="d-flex align-items-center mr-auto">
             <span class="ticket-city">${ticket.origin_name}</span>
             <i class="medium material-icons">flight_takeoff</i>
           </div>
-          <div class="d-flex align-items-center">
+          <div class="ticket-destination">
             <i class="medium material-icons">flight_land</i>
             <span class="ticket-city">${ticket.destination_name}</span>
           </div>
         </div>
-        <div class="ticket-time-price d-flex align-items-center">
+        <div class="ticket-time-price">
           <span class="ticket-time-departure">${ticket.expires_at}</span>
           <span class="ticket-price ml-auto">${ticket.price}</span>
         </div>
