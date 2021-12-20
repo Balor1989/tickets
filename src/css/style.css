@@ -104,6 +104,15 @@ input.datepicker {
 .ticket-card {
 	padding: 15px;
 }
+.ticket-airline {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.ticket-airline-img {
+	width: 80px;
+	margin-right: 20px;
+}
 
 /* Footer */
 footer {
