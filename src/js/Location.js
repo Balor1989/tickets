@@ -39,9 +39,14 @@ class Location {
     };
 
     getCityCodeByKey(key) {
+        if (!key) {
+            return
+        }
         const city = Object.values(this.cities).find((item) => item.full_name === key)
         return city.code;
     };
+    
+
     getCityNameByCode(code) {
         return this.cities[code].name;
     }

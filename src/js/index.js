@@ -4,7 +4,7 @@ import location  from "./Location";
 import formAutocomplete from './FormAutocomplete';
 import currencyEl from './currency';
 import tickets from './Tickets';
-
+import { Loading } from 'notiflix/build/notiflix-loading-aio';
 
 
 
@@ -18,20 +18,22 @@ document.addEventListener('DOMContentLoaded', (e) => {
         onSubmitForm()
     })
 
-    async function initApp()  {
+    async function initApp() {
+        Loading.pulse()
         await location.init();
+        Loading.remove()
         formAutocomplete.setAutocomplete(location.citiesList)
-        console.log(document.querySelector('.card-list'))
+        
     }
 
     async function onSubmitForm() {
-
+        Loading.pulse()
         const origin = location.getCityCodeByKey(formAutocomplete.originValue);
         const destination = location.getCityCodeByKey(formAutocomplete.arrivalValue);
         const depart_date = formAutocomplete.departDateValue;
         const return_date = formAutocomplete.returnDateValue;
         const currency = currencyEl.currencyValue;
-
+console.log(origin,destination,depart_date,return_date)
         await location.fetchTickets({
             origin,
             destination,
@@ -40,5 +42,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
             currency
         });
         tickets.renderTickets(location.lastSearch)
+        Loading.remove()
     }
 })
