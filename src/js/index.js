@@ -1,8 +1,9 @@
 import '../css/style.css'
 import './plugins'
 import location  from "./Location";
-import formAutocomplete from './FormAutocomplete'
+import formAutocomplete from './FormAutocomplete';
 import currencyEl from './currency';
+import tickets from './Tickets';
 
 
 
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
     async function initApp()  {
         await location.init();
         formAutocomplete.setAutocomplete(location.citiesList)
+        console.log(document.querySelector('.card-list'))
     }
 
     async function onSubmitForm() {
@@ -36,5 +38,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
             return_date,
             currency
         });
+        console.log(location.lastSearch)
+        tickets.renderTickets(location.lastSearch)
     }
 })
