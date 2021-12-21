@@ -136,7 +136,7 @@ input.datepicker {
 }
 .ticket-airline-name {
 	font-weight: 700;
-	font-size: 15px;
+	font-size: 20px;
 	color: #381cedeb;
 }
 .tickets-information-box,
@@ -144,17 +144,39 @@ input.datepicker {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
+}
+.tickets-information-box {
+	border-bottom: 5px dotted #381cedeb;
 }
 .ticket-city-from {
+	margin: 0;
+	font-weight: 700;
 	margin-right: 10px;
 	text-transform: uppercase;
 }
 .ticket-city-to {
+	margin: 0;
+	font-weight: 700;
 	margin-left: 10px;
 	text-transform: uppercase;
 }
-
+.ticket-origin,
+.ticket-destination {
+	margin-bottom: 5px;
+}
+.ticket-price {
+	border-radius: 5px;
+	padding: 10px;
+	font-weight: 700;
+	font-size: 20px;
+	color: #fcfcfcda;
+	background-color: #381cedeb;
+}
+.ticket-additional-info,
+.ticket-time-departure {
+	font-weight: 700;
+}
 /* Footer */
 .footer-box {
 	margin-top: 400px;
