@@ -4,8 +4,9 @@ import location  from "./Location";
 import formAutocomplete from './FormAutocomplete';
 import currencyEl from './currency';
 import tickets from './Tickets';
-import  Loading  from './plugins/notiflix';
-
+import Loading from './plugins/notiflix';
+import backToTop from './plugins/backToTop'
+backToTop()
 
 document.addEventListener('DOMContentLoaded', (e) => {
 
